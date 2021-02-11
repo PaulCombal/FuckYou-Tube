@@ -236,7 +236,7 @@ export default {
     }
   },
   mounted() {
-    // this.doSearch() // TODO enable for prod
+    this.doSearch()
     const txt = localStorage.getItem('pls')
     if (!txt) return
     this.pls = JSON.parse(txt)

@@ -30,6 +30,10 @@ To run this in your chromium-based desktop browser, use --disable-web-security
 This is a proof of concept more than anything else, but if you're interested in contributing,
 feel free to say hi!
 
+### Does it work on iOS and Android?
+
+It worked on Android. It should work on iOS, but I don't have an iPhone :(
+
 ## Cool ideas that could be reality
 
 * Download songs as they get streamed
@@ -63,16 +67,19 @@ quasar build
 4. https://github.com/phonegap/phonegap-cli/issues/749#issuecomment-774092746 and make sure to use npm i everytime it spits a missing module at you
    And while I'm at it 'android-versions compare-func' too
 5. In config.xml, remove the icon resources, using defaults is great
-6. `$ phonegap plugin add cordova-plugin-whitelist` and add the few lines of xml below if not already there
-7. In your "real project" ide, do `$ quasar build`
-8. copy from project/dist/spa to release/www
-9. `$ phonegap build android` I have no clue what this does
-10. `$ cordova run android`
+6. `$ cordova platform add android`
+7. `$ phonegap plugin add cordova-plugin-whitelist` and add the few lines of xml below if not already there
+8. In your "real project" ide, do `$ quasar build`
+9. copy from project/dist/spa to release/www
+10. `$ phonegap build android` I have no clue what this does
+11. `$ cordova run android`
 
 As easy as ABC!
 
 Yes I know, PhoneGap has been killed by Adobe for years now, but yet it's the only way I found to get the whitelist plugin
 to actually work. So I'll stick with it. If you're a pro and have better ways please show me.
+
+Once you completed these steps once, you can use `run.sh` to automate it on your connected phone.
 
 ```xml
 <access origin="*" />
